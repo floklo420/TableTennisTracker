@@ -1,0 +1,5 @@
+train: C:\Users\LetsP\Desktop\Ausbildung\YOLO\train\images
+val: C:\Users\LetsP\Desktop\Ausbildung\YOLO\val\images  # Verwende Trainingsbilder als Validierungsdaten
+
+nc: 3
+names: ['plate', 'racket', 'ttball']
