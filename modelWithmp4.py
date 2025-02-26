@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Verwende Gerät: {device}")
 
 # Modell laden und auf das gewählte Gerät verlagern
-model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLO\runs\detect\train13\weights\best.pt')  # Pfad anpassen
+model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\runs\detect\train16\weights\best.pt')  # Pfad anpassen
 model.to(device)
 
 # Zielklassen definieren (Namen überprüfen)
@@ -17,7 +17,7 @@ target_classes = [key for key, value in model.names.items() if value in ('plate'
 print(f"Zielklassen-IDs: {target_classes}")
 
 # Videodatei öffnen (Pfad anpassen)
-video_path = r'C:\Users\LetsP\Desktop\Ausbildung\YOLO\newData\videoTTBall\video_2025-02-12_13-12-37.mp4'
+video_path = r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\TestVid\video_2025-02-12_13-12-37.mp4'
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():

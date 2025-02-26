@@ -9,10 +9,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Verwende Gerät: {device}")
 
 # Modell laden
-model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLO\runs\detect\train13\weights\best.pt')
+model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\runs\detect\train16\weights\best.pt')
 model.to(device)
 
-# Zielklassen: Jetzt ALLE wieder tracken!
+# Zielklassen
 target_classes = {key: value for key, value in model.names.items() if value in ('plate', 'racket', 'ttball')}
 print(f"Zielklassen: {target_classes}")
 
@@ -23,7 +23,7 @@ kalman.transitionMatrix = np.array([[1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0
 kalman.processNoiseCov = np.eye(4, dtype=np.float32) * 0.03
 
 # Video öffnen
-video_path = r'C:\Users\LetsP\Desktop\Ausbildung\YOLO\newData\videoTTBall\video_2025-02-12_13-12-37.mp4'
+video_path = r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\TestVid\video_2025-02-12_13-12-37.mp4'
 cap = cv2.VideoCapture(video_path)
 
 if not cap.isOpened():
