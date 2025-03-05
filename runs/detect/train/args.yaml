@@ -1,7 +1,7 @@
 task: detect
 mode: train
-model: C:\Users\LetsP\Desktop\Ausbildung\YOLO\yolo11n.pt
-data: C:\Users\LetsP\Desktop\Ausbildung\YOLO\dataset.yaml
+model: C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\yolo11n.pt
+data: C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\dataset.yaml
 epochs: 100
 time: null
 patience: 100
@@ -10,8 +10,8 @@ imgsz: 640
 save: true
 save_period: -1
 cache: false
-device: null
-workers: 4
+device: cuda
+workers: 6
 project: null
 name: train
 exist_ok: false
