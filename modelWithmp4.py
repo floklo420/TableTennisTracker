@@ -8,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Verwende Gerät: {device}")
 
 # Modell laden und auf das gewählte Gerät verlagern
-model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\runs\detect\train\weights\best.pt')  # Pfad anpassen
+model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\runs\detect\train6\weights\best.pt')  # Pfad anpassen
 model.to(device)
 
 # Zielklassen definieren (Namen überprüfen)

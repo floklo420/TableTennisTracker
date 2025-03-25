@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "plate"
+    },
+    {
+      "id": 1,
+      "name": "racket"
+    },
+    {
+      "id": 2,
+      "name": "ttball"
+    }
+  ],
+  "info": {
+    "year": 2025,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

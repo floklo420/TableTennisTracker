@@ -13,13 +13,14 @@ if __name__ == '__main__':
         device = torch.device('cpu')
 
     
-    model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\yolo11n.pt').to(device)
+    model = YOLO(r'C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\yolo11n.pt')
 
     # Training starten
     model.train(
         data=r"C:\Users\LetsP\Desktop\Ausbildung\YOLOrepo\TableTennisTracker\dataset.yaml",  # Pfad zu deiner Dataset-Datei
         epochs=100,  # Anzahl der Trainingsepochen
         imgsz=640,  # Bildgröße
+        
         batch=16,  # Batch-Größe
         workers=6,  # Anzahl der Worker für Datenvorbereitung (CPU Kerne)
         device=device,  # Training auf der GPU
